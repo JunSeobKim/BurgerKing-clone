@@ -58,13 +58,29 @@
 			children = (
 				6E849A98283D100700D6B1E4 /* AppDelegate.swift */,
 				6E849A9A283D100700D6B1E4 /* SceneDelegate.swift */,
-				6E849A9C283D100700D6B1E4 /* ViewController.swift */,
-				6E849A9E283D100700D6B1E4 /* Main.storyboard */,
+				6E849AAD283D10B700D6B1E4 /* Controller */,
+				6E849AAC283D109E00D6B1E4 /* View */,
 				6E849AA1283D100900D6B1E4 /* Assets.xcassets */,
 				6E849AA3283D100900D6B1E4 /* LaunchScreen.storyboard */,
 				6E849AA6283D100900D6B1E4 /* Info.plist */,
 			);
 			path = "BurgerKing-clone";
+			sourceTree = "<group>";
+		};
+		6E849AAC283D109E00D6B1E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E849A9E283D100700D6B1E4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E849AAD283D10B700D6B1E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E849A9C283D100700D6B1E4 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
