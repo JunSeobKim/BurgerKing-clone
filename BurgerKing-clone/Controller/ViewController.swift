@@ -11,9 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        navigationItem.titleView = UIImageView(image: UIImage(named: "main-logo"))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburger-btn"))
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "barcode")),UIBarButtonItem(image: UIImage(named: "cart"))]
     }
-
-
 }
 
