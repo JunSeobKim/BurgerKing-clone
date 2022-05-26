@@ -14,6 +14,7 @@
 		6E849AA2283D100900D6B1E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E849AA1283D100900D6B1E4 /* Assets.xcassets */; };
 		6E849AA5283D100900D6B1E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E849AA3283D100900D6B1E4 /* LaunchScreen.storyboard */; };
 		6EA09C6B283ED54300EE2612 /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA09C6A283ED54300EE2612 /* CouponController.swift */; };
+		6EA5971D28402A0200DD559A /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5971C28402A0200DD559A /* OrderController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6E849AA4283D100900D6B1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E849AA6283D100900D6B1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA09C6A283ED54300EE2612 /* CouponController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
+		6EA5971C28402A0200DD559A /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				6E849A9C283D100700D6B1E4 /* ViewController.swift */,
 				6EA09C6A283ED54300EE2612 /* CouponController.swift */,
+				6EA5971C28402A0200DD559A /* OrderController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E849A9D283D100700D6B1E4 /* ViewController.swift in Sources */,
+				6EA5971D28402A0200DD559A /* OrderController.swift in Sources */,
 				6E849A99283D100700D6B1E4 /* AppDelegate.swift in Sources */,
 				6EA09C6B283ED54300EE2612 /* CouponController.swift in Sources */,
 				6E849A9B283D100700D6B1E4 /* SceneDelegate.swift in Sources */,

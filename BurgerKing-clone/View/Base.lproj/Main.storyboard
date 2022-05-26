@@ -4,6 +4,8 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -137,6 +139,7 @@
                     <connections>
                         <segue destination="JOR-eU-qMK" kind="relationship" relationship="viewControllers" id="Uib-DR-GHs"/>
                         <segue destination="YxI-Nx-eUm" kind="relationship" relationship="viewControllers" id="joG-99-B67"/>
+                        <segue destination="ceL-xQ-J3S" kind="relationship" relationship="viewControllers" id="Mdw-Gd-29Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMG-su-Se6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -159,11 +162,69 @@
             </objects>
             <point key="canvasLocation" x="2392.753623188406" y="265.84821428571428"/>
         </scene>
-        <!--홈-->
+        <!--Order Controller-->
+        <scene sceneID="Rif-pt-MbP">
+            <objects>
+                <viewController id="EcL-aG-UBg" customClass="OrderController" customModule="BurgerKing_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6bf-bm-jSS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ySm-GD-6Nb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JP2-po-SEJ">
+                                    <size key="itemSize" width="414" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="n7K-zL-b8P" customClass="MenuClass" customModule="BurgerKing_clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c0g-lw-zWx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu01" translatesAutoresizingMaskIntoConstraints="NO" id="not-56-nd2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="not-56-nd2" firstAttribute="top" secondItem="c0g-lw-zWx" secondAttribute="top" id="H4p-54-PoF"/>
+                                                <constraint firstAttribute="trailing" secondItem="not-56-nd2" secondAttribute="trailing" id="KH5-Wx-Ytu"/>
+                                                <constraint firstAttribute="bottom" secondItem="not-56-nd2" secondAttribute="bottom" id="YJs-Uj-bwz"/>
+                                                <constraint firstItem="not-56-nd2" firstAttribute="leading" secondItem="c0g-lw-zWx" secondAttribute="leading" id="zve-3t-ZxO"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="not-56-nd2" id="T31-SO-9kO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qf5-RY-fuy"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.92156862745098034" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ySm-GD-6Nb" firstAttribute="leading" secondItem="Qf5-RY-fuy" secondAttribute="leading" id="Rdw-Xg-grS"/>
+                            <constraint firstItem="ySm-GD-6Nb" firstAttribute="top" secondItem="Qf5-RY-fuy" secondAttribute="top" id="Yh1-mB-Erg"/>
+                            <constraint firstItem="Qf5-RY-fuy" firstAttribute="trailing" secondItem="ySm-GD-6Nb" secondAttribute="trailing" id="f8d-RG-1TB"/>
+                            <constraint firstItem="Qf5-RY-fuy" firstAttribute="bottom" secondItem="ySm-GD-6Nb" secondAttribute="bottom" id="qwA-0e-3gK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xpf-pl-nOh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qk9-AW-Z1L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2392.753623188406" y="973.66071428571422"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="3E9-HD-9Tk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JOR-eU-qMK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" selectedImage="homekit" id="fb0-lU-a2h"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="fb0-lU-a2h"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i2d-KD-B8w">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -178,11 +239,11 @@
             </objects>
             <point key="canvasLocation" x="1405.7971014492755" y="-417.1875"/>
         </scene>
-        <!--쿠폰-->
+        <!--Navigation Controller-->
         <scene sceneID="JHI-ZS-dgB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YxI-Nx-eUm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="쿠폰" image="giftcard.fill" catalog="system" id="Yfr-nH-7PC"/>
+                    <tabBarItem key="tabBarItem" title="" image="coupon" selectedImage="coupon" id="Yfr-nH-7PC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="phs-sX-d2E">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -197,16 +258,40 @@
             </objects>
             <point key="canvasLocation" x="1482.608695652174" y="265.84821428571428"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1hb-ax-hLA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceL-xQ-J3S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="order" id="rxf-NR-W5D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PPS-pw-Nf8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EcL-aG-UBg" kind="relationship" relationship="rootViewController" id="dUa-QS-3Vh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIz-yc-n1O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482.608695652174" y="973.66071428571422"/>
+        </scene>
     </scenes>
     <resources>
         <image name="banner" width="408" height="410"/>
+        <image name="coupon" width="40" height="50"/>
         <image name="delivery" width="199" height="100"/>
-        <image name="giftcard.fill" catalog="system" width="128" height="88"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="home" width="32" height="50"/>
         <image name="king-order" width="203" height="102"/>
         <image name="membership" width="412" height="126"/>
         <image name="menu-crispy" width="157" height="178"/>
         <image name="menu-diablo" width="157" height="178"/>
         <image name="menu-spisy" width="157" height="177"/>
+        <image name="menu01" width="387" height="121"/>
+        <image name="order" width="41" height="57"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
