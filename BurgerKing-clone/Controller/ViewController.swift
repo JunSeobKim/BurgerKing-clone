@@ -11,6 +11,17 @@ import Photos
 
 class ViewController: UIViewController {
 
+    @IBAction func diabloBtn(_ sender: UIButton) {
+//        모달창 띄우는 방법
+//        guard let cartController = storyboard?.instantiateViewController(withIdentifier: "CartController") as? CartController else {return}
+//        cartController.modalPresentationStyle = .fullScreen
+//        self.present(cartController, animated: true)
+        
+//      네비게이션 컨트롤러 화면전환
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "ProductController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = UIImageView(image: UIImage(named: "main-logo"))

@@ -12,11 +12,5 @@ class OrderController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = UIImageView(image: UIImage(named: "order-title"))
-        // Do any additional setup after loading the view.
     }
-}
-
-class MenuClass: UICollectionViewCell {
-    
-    @IBOutlet weak var imgView: UIImageView!
 }

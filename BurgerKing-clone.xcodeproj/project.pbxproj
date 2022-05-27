@@ -15,6 +15,8 @@
 		6E849AA5283D100900D6B1E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E849AA3283D100900D6B1E4 /* LaunchScreen.storyboard */; };
 		6EA09C6B283ED54300EE2612 /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA09C6A283ED54300EE2612 /* CouponController.swift */; };
 		6EA5971D28402A0200DD559A /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5971C28402A0200DD559A /* OrderController.swift */; };
+		6EA5971F2840770F00DD559A /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5971E2840770F00DD559A /* CartController.swift */; };
+		6EA5972128407F1500DD559A /* ProductController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5972028407F1500DD559A /* ProductController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		6E849AA6283D100900D6B1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA09C6A283ED54300EE2612 /* CouponController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
 		6EA5971C28402A0200DD559A /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
+		6EA5971E2840770F00DD559A /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
+		6EA5972028407F1500DD559A /* ProductController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				6E849A9C283D100700D6B1E4 /* ViewController.swift */,
 				6EA09C6A283ED54300EE2612 /* CouponController.swift */,
 				6EA5971C28402A0200DD559A /* OrderController.swift */,
+				6EA5971E2840770F00DD559A /* CartController.swift */,
+				6EA5972028407F1500DD559A /* ProductController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E849A9D283D100700D6B1E4 /* ViewController.swift in Sources */,
+				6EA5971F2840770F00DD559A /* CartController.swift in Sources */,
+				6EA5972128407F1500DD559A /* ProductController.swift in Sources */,
 				6EA5971D28402A0200DD559A /* OrderController.swift in Sources */,
 				6E849A99283D100700D6B1E4 /* AppDelegate.swift in Sources */,
 				6EA09C6B283ED54300EE2612 /* CouponController.swift in Sources */,
