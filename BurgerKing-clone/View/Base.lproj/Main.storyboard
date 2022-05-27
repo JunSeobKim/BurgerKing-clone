@@ -196,6 +196,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textFieldOutlet" destination="dhy-c3-9zd" id="KnG-Dd-OJa"/>
                         <segue destination="xew-SU-8Y3" kind="show" id="xLq-vg-wrp"/>
                     </connections>
                 </viewController>
