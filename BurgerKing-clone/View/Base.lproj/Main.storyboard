@@ -4,8 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -134,7 +132,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D86-kx-dTM">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.92156862750000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.96078431369999995" green="0.92156862750000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.92156862750000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.83921568627450982" green="0.13333333333333333" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="JOR-eU-qMK" kind="relationship" relationship="viewControllers" id="Uib-DR-GHs"/>
@@ -170,48 +171,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ySm-GD-6Nb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDp-56-lsD">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JP2-po-SEJ">
-                                    <size key="itemSize" width="414" height="150"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="n7K-zL-b8P" customClass="MenuClass" customModule="BurgerKing_clone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c0g-lw-zWx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu01" translatesAutoresizingMaskIntoConstraints="NO" id="not-56-nd2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="not-56-nd2" firstAttribute="top" secondItem="c0g-lw-zWx" secondAttribute="top" id="H4p-54-PoF"/>
-                                                <constraint firstAttribute="trailing" secondItem="not-56-nd2" secondAttribute="trailing" id="KH5-Wx-Ytu"/>
-                                                <constraint firstAttribute="bottom" secondItem="not-56-nd2" secondAttribute="bottom" id="YJs-Uj-bwz"/>
-                                                <constraint firstItem="not-56-nd2" firstAttribute="leading" secondItem="c0g-lw-zWx" secondAttribute="leading" id="zve-3t-ZxO"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="imgView" destination="not-56-nd2" id="T31-SO-9kO"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zfg-17-bPv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1141"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu01" translatesAutoresizingMaskIntoConstraints="NO" id="XHN-Hb-re8">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu02" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-Cf-LSF">
+                                                <rect key="frame" x="0.0" y="121" width="414" height="118"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu03" translatesAutoresizingMaskIntoConstraints="NO" id="mfH-ve-FPQ">
+                                                <rect key="frame" x="0.0" y="239" width="414" height="144"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu04" translatesAutoresizingMaskIntoConstraints="NO" id="j9G-Wa-tFb">
+                                                <rect key="frame" x="0.0" y="383" width="414" height="111"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu05" translatesAutoresizingMaskIntoConstraints="NO" id="Qps-FL-fbE">
+                                                <rect key="frame" x="0.0" y="494" width="414" height="108"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu06" translatesAutoresizingMaskIntoConstraints="NO" id="BBE-WS-Qr0">
+                                                <rect key="frame" x="0.0" y="602" width="414" height="103"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu07" translatesAutoresizingMaskIntoConstraints="NO" id="aLU-2M-h2y">
+                                                <rect key="frame" x="0.0" y="705" width="414" height="122"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu08" translatesAutoresizingMaskIntoConstraints="NO" id="dcC-rJ-lLA">
+                                                <rect key="frame" x="0.0" y="827" width="414" height="104"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu09" translatesAutoresizingMaskIntoConstraints="NO" id="oy9-JH-kGk">
+                                                <rect key="frame" x="0.0" y="931" width="414" height="104"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu10" translatesAutoresizingMaskIntoConstraints="NO" id="uld-T8-lzm">
+                                                <rect key="frame" x="0.0" y="1035" width="414" height="106"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zfg-17-bPv" firstAttribute="leading" secondItem="2AP-mU-jy4" secondAttribute="leading" id="2CF-31-6cK"/>
+                                    <constraint firstItem="zfg-17-bPv" firstAttribute="top" secondItem="2AP-mU-jy4" secondAttribute="top" id="A80-MM-nnu"/>
+                                    <constraint firstItem="zfg-17-bPv" firstAttribute="bottom" secondItem="2AP-mU-jy4" secondAttribute="bottom" id="N79-kx-csy"/>
+                                    <constraint firstItem="zfg-17-bPv" firstAttribute="width" secondItem="1lb-At-SeT" secondAttribute="width" id="esL-pB-vVW"/>
+                                    <constraint firstItem="zfg-17-bPv" firstAttribute="trailing" secondItem="2AP-mU-jy4" secondAttribute="trailing" id="jdy-4Y-h5h"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="2AP-mU-jy4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1lb-At-SeT"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qf5-RY-fuy"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.92156862745098034" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ySm-GD-6Nb" firstAttribute="leading" secondItem="Qf5-RY-fuy" secondAttribute="leading" id="Rdw-Xg-grS"/>
-                            <constraint firstItem="ySm-GD-6Nb" firstAttribute="top" secondItem="Qf5-RY-fuy" secondAttribute="top" id="Yh1-mB-Erg"/>
-                            <constraint firstItem="Qf5-RY-fuy" firstAttribute="trailing" secondItem="ySm-GD-6Nb" secondAttribute="trailing" id="f8d-RG-1TB"/>
-                            <constraint firstItem="Qf5-RY-fuy" firstAttribute="bottom" secondItem="ySm-GD-6Nb" secondAttribute="bottom" id="qwA-0e-3gK"/>
+                            <constraint firstItem="Qf5-RY-fuy" firstAttribute="bottom" secondItem="dDp-56-lsD" secondAttribute="bottom" id="4Sz-K3-KzD"/>
+                            <constraint firstItem="Qf5-RY-fuy" firstAttribute="trailing" secondItem="dDp-56-lsD" secondAttribute="trailing" id="5af-Zf-D8s"/>
+                            <constraint firstItem="dDp-56-lsD" firstAttribute="top" secondItem="Qf5-RY-fuy" secondAttribute="top" id="I1x-w9-w3E"/>
+                            <constraint firstItem="dDp-56-lsD" firstAttribute="leading" secondItem="Qf5-RY-fuy" secondAttribute="leading" id="hsj-Jv-qU2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xpf-pl-nOh"/>
@@ -229,6 +245,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i2d-KD-B8w">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.92156862750000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -248,6 +265,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="phs-sX-d2E">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.92156862750000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -262,11 +280,14 @@
         <scene sceneID="1hb-ax-hLA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceL-xQ-J3S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="order" id="rxf-NR-W5D"/>
+                    <tabBarItem key="tabBarItem" title="" image="order" id="rxf-NR-W5D">
+                        <color key="badgeColor" red="0.96078431369999995" green="0.92156862750000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PPS-pw-Nf8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.92156862750000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -289,9 +310,15 @@
         <image name="menu-diablo" width="157" height="178"/>
         <image name="menu-spisy" width="157" height="177"/>
         <image name="menu01" width="387" height="121"/>
+        <image name="menu02" width="384" height="118"/>
+        <image name="menu03" width="383" height="144"/>
+        <image name="menu04" width="385" height="111"/>
+        <image name="menu05" width="381" height="108"/>
+        <image name="menu06" width="382" height="103"/>
+        <image name="menu07" width="383" height="122"/>
+        <image name="menu08" width="378" height="104"/>
+        <image name="menu09" width="382" height="104"/>
+        <image name="menu10" width="378" height="106"/>
         <image name="order" width="41" height="57"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = UIImageView(image: UIImage(named: "main-logo"))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburger-btn"))
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "barcode")),UIBarButtonItem(image: UIImage(named: "cart"))]
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburger-btn"))
+//        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "barcode")),UIBarButtonItem(image: UIImage(named: "cart"))]
         
         checkCameraPermission()
         checkAlbumPermission()
